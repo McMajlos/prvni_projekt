@@ -1,3 +1,4 @@
+# Zadane hodnoty
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
@@ -33,7 +34,7 @@ registered_users = {
     "liz": "pass123",
 }
 
-
+# O projektu
 print("""
 projekt_1.py: první projekt do Engeto Online Python Akademie
 
@@ -42,7 +43,7 @@ email: milosprehnil@gmail.com
 discord: bigburtmajlos
 """)
 
-
+# Zacatek kodu
 jmeno = input("username: ")
 heslo = input("password: ")
 
@@ -90,11 +91,10 @@ if jmeno in registered_users and heslo == registered_users[jmeno]:
             print("-"*40)
             print(f"{"LEN|":<3} {"OCCURENCES":^{max_occurences}} |NR")
             print("-"*40)
-
-            for i in sorted(slovnik.keys()):
-                length = i
-                pocet = slovnik[i]
-                print(f"{length:>3}| {"*"*pocet:<{max_occurences}} |{pocet:<1}")
+            # Grafana
+            for delka in sorted(slovnik.keys()):
+                pocet = slovnik[delka]
+                print(f"{delka:>3}| {"*"*pocet:<{max_occurences}} |{pocet:<1}")
         else:
             print("Number out of range. Terminating the program...")
     else:
